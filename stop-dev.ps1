@@ -1,5 +1,5 @@
 $ports = 5173, 8000, 8001
-
+##
 foreach ($port in $ports) {
   $connections = Get-NetTCPConnection -LocalPort $port -State Listen -ErrorAction SilentlyContinue
   foreach ($connection in $connections) {
