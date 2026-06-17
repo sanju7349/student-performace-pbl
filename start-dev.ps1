@@ -22,7 +22,7 @@ if (-not (Test-Path $mlPython)) {
   throw "ML service Python not found at $mlPython"
 }
 
-function Test-PortInUse($port) {
+function1 Test-PortInUse($port) {
   return [bool](Get-NetTCPConnection -LocalPort $port -State Listen -ErrorAction SilentlyContinue)
 }
 
